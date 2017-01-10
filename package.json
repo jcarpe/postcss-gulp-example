@@ -1,0 +1,17 @@
+{
+  "name": "postcss-example",
+  "version": "1.0.0",
+  "description": "simple example of using PostCSS",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Joe Carpenito",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^6.6.1",
+    "cssnano": "^3.10.0",
+    "gulp": "^3.9.1",
+    "gulp-postcss": "^6.2.0"
+  }
+}
