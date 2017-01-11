@@ -4,6 +4,7 @@ let gulp = require( 'gulp' ),
 	connect = require( 'gulp-connect' ),
 	postcss = require( 'gulp-postcss' ),
 	preprocessors = [
+		require( 'postcss-custom-properties' ),
 		require( 'postcss-contrast' ),
 		require( 'autoprefixer' ),
 		require( 'cssnano' ),
