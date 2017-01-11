@@ -16,6 +16,8 @@
     "gulp-connect": "^5.0.0",
     "gulp-postcss": "^6.2.0",
     "postcss-contrast": "0.0.4",
-    "postcss-custom-properties": "^5.0.1"
+    "postcss-custom-properties": "^5.0.1",
+    "chai": "^3.5.0",
+    "chai-http": "^3.0.0"
   }
 }
