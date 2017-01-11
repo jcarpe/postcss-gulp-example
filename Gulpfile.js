@@ -23,7 +23,6 @@ gulp.task( 'styles', require( './tasks/compile-postcss.js' )(
 
 gulp.task( 'serve', () => {
 	connect.server({
-		root: 'build',
 		port: 1337
 	});
 });
