@@ -1,6 +1,7 @@
 'use strict';
 
 let gulp = require( 'gulp' ),
+	connect = require( 'gulp-connect' ),
 	postcss = require( 'gulp-postcss' ),
 	preprocessors = [
 		require( 'postcss-contrast' ),
@@ -19,3 +20,10 @@ gulp.task( 'styles', require( './tasks/compile-postcss.js' )(
 	},
 	preprocessors
 ) );
+
+gulp.task( 'serve', () => {
+	connect.server({
+		root: 'build',
+		port: 1337
+	});
+});
