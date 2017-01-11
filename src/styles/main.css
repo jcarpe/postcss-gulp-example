@@ -1,4 +1,14 @@
+:root {
+	--bg-color: #fff;
+	--invert-bg-color: #000;
+}
+
 .test-item {
 	display: flex;
 	flex-flow: row wrap;
+}
+
+.test-contrast {
+	background-color: var(--invert-bg-color);
+	color: contrast(var(--invert-bg-color));
 }

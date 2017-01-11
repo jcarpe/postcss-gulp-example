@@ -3,8 +3,9 @@
 let gulp = require( 'gulp' ),
 	postcss = require( 'gulp-postcss' ),
 	preprocessors = [
-		require('autoprefixer'),
-		require('cssnano'),
+		require( 'postcss-contrast' ),
+		require( 'autoprefixer' ),
+		require( 'cssnano' ),
 	];
 
 gulp.task( 'default', () => {});
