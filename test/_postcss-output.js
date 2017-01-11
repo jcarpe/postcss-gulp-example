@@ -11,7 +11,8 @@ let Promise = require( 'bluebird' ),
 		require( 'autoprefixer' ),
 		require( 'cssnano' ),
 	],
-	compilePostcss = require( './tasks/_compile-postcss' );
+	compilePostcss = require( '../tasks/compile-postcss.js' ),
+	chai = require( 'chai' );
 
 describe( '_postcss-output', () => {
 
@@ -19,14 +20,15 @@ describe( '_postcss-output', () => {
 		let stream = compilePostcss( gulp, postcss, {
 			source: './src/styles/main.css',
 			build: './build/styles'
-		}, preprocessors );
+		}, preprocessors )();
 
 		stream.on( 'end', () => {
 			let dir = path.resolve( './build/styles' );
 
 			fs.readdirAsync( dir )
 				.then( ( results ) => {
-					expect( results.indexOf( 'index.js' ) ).toBeGreaterThan( 0 );
+					chai.expect( results.indexOf( 'main.css' ) ).to.equal( 0 );
+					done();
 				});
 		})
 	});
