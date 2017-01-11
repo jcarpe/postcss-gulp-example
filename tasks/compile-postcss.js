@@ -1,12 +1,6 @@
 'use strict';
 
-let postcss = require( 'gulp-postcss' );
-// 	preprocessors = [
-// 		require('autoprefixer'),
-// 		require('cssnano'),
-// 	];
-
-module.exports = ( gulp, paths, preprocessors ) => {
+module.exports = ( gulp, postcss, paths, preprocessors ) => {
 	return () => {
 		return gulp.src( paths.source )
 	        .pipe( postcss( preprocessors ) )

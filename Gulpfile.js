@@ -11,6 +11,7 @@ gulp.task( 'default', () => {});
 
 gulp.task( 'styles', require( './tasks/compile-postcss.js' )(
 	gulp,
+	postcss,
 	{
 		source: './src/styles/main.css',
 		build: './build/styles'
